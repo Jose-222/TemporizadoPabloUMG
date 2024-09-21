@@ -63,3 +63,6 @@ Nos agregará como en el siguiente ejemplo:
 - **(x) o Eliminar:** Borra el temporizador que estemos seleccionando.
 
 ---
+## LINK A JIRA:
+https://miumg-desarrolloweb.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiNDk4NDEzYzA2OGE4NGNhODgyYmM2OGQwMzQzZjQ2MDUiLCJwIjoiaiJ9
+
