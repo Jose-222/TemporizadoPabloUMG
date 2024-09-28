@@ -52,3 +52,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'timer';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['get-temperature'] = 'weather/get_temperature';

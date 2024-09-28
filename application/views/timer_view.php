@@ -11,6 +11,14 @@
         <h1>Conteo de Tiempo por equipos UMG</h1>
     </header>
     <main>
+
+            <!-- Espacio para mostrar la temperatura -->
+            <div id="weather">
+             <p>Temperatura actual: <span id="currentTemperature">Cargando...</span> °C</p>
+            </div>
+
+
+
         <div id="timersContainer">
             <!-- Espacio donde iran los temporizadores -->
         </div>
@@ -45,5 +53,27 @@
         </div>
     </main>
     <script src="<?php echo base_url('assets/js/timer.js'); ?>"></script>
+
+
+    <!-- temperatura API -->
+    <script>
+    function getTemperature() {
+        fetch("<?php echo base_url('weather/get_temperature'); ?>")
+        .then(response => response.json())
+        .then(data => {
+            if (data.temperature) {
+                document.getElementById('currentTemperature').textContent = data.temperature;
+            } else {
+                document.getElementById('currentTemperature').textContent = 'Error';
+            }
+        })
+        .catch(error => {
+            document.getElementById('currentTemperature').textContent = 'Error';
+        });
+    }
+
+    // Llamar a la función 
+    window.onload = getTemperature;
+</script>
 </body>
 </html>
